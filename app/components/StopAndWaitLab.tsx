@@ -80,7 +80,7 @@ export function StopAndWaitLab() {
             <span className="text-xs font-medium uppercase tracking-wide text-neutral-500">
               Frame seq (this round)
             </span>
-            <span className="rounded-lg border border-neutral-200 bg-white px-3 py-1 font-mono text-lg tabular-nums shadow-sm">
+            <span className="rounded-lg border border-neutral-300 bg-neutral-100 px-3 py-1 font-mono text-lg font-bold tabular-nums text-neutral-950 shadow-sm dark:border-neutral-600 dark:bg-neutral-950 dark:text-neutral-50">
               {seq}
             </span>
           </div>
@@ -89,8 +89,8 @@ export function StopAndWaitLab() {
             onClick={() => setRunning((r) => !r)}
             className={`rounded-full px-4 py-1.5 text-sm font-semibold shadow-sm transition active:scale-[0.98] ${
               running
-                ? "border border-neutral-300 bg-white text-neutral-800 hover:bg-neutral-50"
-                : "border border-neutral-900 bg-neutral-900 text-white hover:bg-neutral-800"
+                ? "border border-neutral-300 bg-white text-neutral-900 hover:bg-neutral-50 dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-100 dark:hover:bg-neutral-800"
+                : "border border-neutral-900 bg-neutral-900 text-white hover:bg-neutral-800 dark:border-neutral-100 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-white"
             }`}
           >
             {running ? "Pause" : "Play"}
@@ -117,7 +117,7 @@ export function StopAndWaitLab() {
 
             {showData && (
               <div
-                className={`pointer-events-none absolute top-5 z-10 flex h-9 min-w-[4.25rem] items-center justify-center rounded-full border border-blue-200 bg-blue-50 px-3 font-mono text-xs font-bold text-blue-900 shadow-md transition-[left] duration-[1600ms] ease-in-out ${
+                className={`pointer-events-none absolute top-5 z-10 flex h-9 min-w-[4.25rem] items-center justify-center rounded-full border border-blue-200 bg-blue-50 px-3 font-mono text-xs font-bold text-blue-950 shadow-md transition-[left] duration-[1600ms] ease-in-out dark:border-blue-600 dark:bg-blue-950 dark:text-blue-100 ${
                   dataMoving ? "animate-packet-pulse left-[calc(100%-4.5rem)]" : "left-0"
                 }`}
               >
@@ -127,7 +127,7 @@ export function StopAndWaitLab() {
 
             {showAck && (
               <div
-                className={`pointer-events-none absolute top-[3.5rem] z-10 flex h-9 min-w-[4.25rem] items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 px-3 font-mono text-xs font-bold text-emerald-900 shadow-md transition-[right] duration-[1400ms] ease-in-out ${
+                className={`pointer-events-none absolute top-[3.5rem] z-10 flex h-9 min-w-[4.25rem] items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 px-3 font-mono text-xs font-bold text-emerald-950 shadow-md transition-[right] duration-[1400ms] ease-in-out dark:border-emerald-600 dark:bg-emerald-950 dark:text-emerald-100 ${
                   ackMoving ? "right-[calc(100%-4.5rem)]" : "right-0"
                 }`}
               >
@@ -187,11 +187,11 @@ export function StopAndWaitLab() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-neutral-200 bg-white p-4">
-        <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Event log</h3>
-        <ul className="mt-3 max-h-44 space-y-1 overflow-y-auto font-mono text-[11px] leading-relaxed text-neutral-700">
+      <div className="rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-950">
+        <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Event log</h3>
+        <ul className="mt-3 max-h-44 space-y-1 overflow-y-auto font-mono text-[11px] leading-relaxed text-neutral-700 dark:text-neutral-300">
           {log.map((line, i) => (
-            <li key={`${i}-${line.slice(0, 24)}`} className="animate-log-line border-l-2 border-neutral-200 pl-2">
+            <li key={`${i}-${line.slice(0, 24)}`} className="animate-log-line border-l-2 border-neutral-200 pl-2 dark:border-neutral-600">
               {line}
             </li>
           ))}

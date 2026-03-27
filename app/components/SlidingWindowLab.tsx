@@ -231,22 +231,31 @@ export function SlidingWindowLab() {
     <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
       <div className="min-w-0 overflow-x-auto rounded-2xl border border-neutral-200 bg-neutral-50 p-4 sm:p-6 md:p-8 [-webkit-overflow-scrolling:touch]">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap gap-4 text-xs text-neutral-600">
+          <div className="flex flex-wrap gap-4 text-xs text-neutral-600 dark:text-neutral-400">
             <span>
-              <span className="font-semibold text-neutral-900">send_base:</span> {Math.min(frame.sendBase, TOTAL_FRAMES)}
+              <span className="font-semibold text-neutral-900 dark:text-neutral-100">send_base:</span>{" "}
+              <span className="font-mono font-bold text-neutral-950 dark:text-neutral-50">
+                {Math.min(frame.sendBase, TOTAL_FRAMES)}
+              </span>
             </span>
             <span>
-              <span className="font-semibold text-neutral-900">next_seq:</span> {Math.min(frame.nextSeq, TOTAL_FRAMES)}
+              <span className="font-semibold text-neutral-900 dark:text-neutral-100">next_seq:</span>{" "}
+              <span className="font-mono font-bold text-neutral-950 dark:text-neutral-50">
+                {Math.min(frame.nextSeq, TOTAL_FRAMES)}
+              </span>
             </span>
             <span>
-              <span className="font-semibold text-neutral-900">window:</span> [{frame.sendBase}…{frame.windowEnd}]
+              <span className="font-semibold text-neutral-900 dark:text-neutral-100">window:</span>{" "}
+              <span className="font-mono font-bold text-neutral-950 dark:text-neutral-50">
+                [{frame.sendBase}…{frame.windowEnd}]
+              </span>
             </span>
           </div>
           <div className="flex gap-2">
             <button
               type="button"
               onClick={() => setFi((i) => i + 1)}
-              className="rounded-full border border-neutral-300 bg-white px-3 py-1.5 text-sm font-medium shadow-sm transition hover:bg-neutral-50"
+              className="rounded-full border border-neutral-300 bg-white px-3 py-1.5 text-sm font-medium text-neutral-900 shadow-sm transition hover:bg-neutral-50 dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-100 dark:hover:bg-neutral-800"
             >
               Step
             </button>
@@ -255,8 +264,8 @@ export function SlidingWindowLab() {
               onClick={() => setRunning((r) => !r)}
               className={`rounded-full px-3 py-1.5 text-sm font-semibold shadow-sm transition active:scale-[0.98] ${
                 running
-                  ? "border border-neutral-300 bg-white text-neutral-800 hover:bg-neutral-50"
-                  : "border border-neutral-900 bg-neutral-900 text-white hover:bg-neutral-800"
+                  ? "border border-neutral-300 bg-white text-neutral-900 hover:bg-neutral-50 dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-100 dark:hover:bg-neutral-800"
+                  : "border border-neutral-900 bg-neutral-900 text-white hover:bg-neutral-800 dark:border-neutral-100 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-white"
               }`}
             >
               {running ? "Pause" : "Play"}
@@ -275,10 +284,10 @@ export function SlidingWindowLab() {
                   key={n}
                   className={`flex h-11 w-11 items-center justify-center rounded-lg border font-mono text-sm font-bold transition-all duration-500 ${
                     inWindow
-                      ? "border-blue-400 bg-blue-50 text-blue-900 shadow-md ring-2 ring-blue-100"
+                      ? "border-blue-400 bg-blue-50 text-blue-950 shadow-md ring-2 ring-blue-100 dark:border-blue-500 dark:bg-blue-950 dark:text-blue-100 dark:ring-blue-900/50"
                       : sent
-                        ? "border-neutral-200 bg-neutral-100 text-neutral-500"
-                        : "border-neutral-200 bg-white text-neutral-400"
+                        ? "border-neutral-200 bg-neutral-100 text-neutral-700 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-200"
+                        : "border-neutral-200 bg-white text-neutral-600 dark:border-neutral-700 dark:bg-neutral-950 dark:text-neutral-200"
                   }`}
                 >
                   {n}
@@ -311,7 +320,7 @@ export function SlidingWindowLab() {
                 return (
                   <div
                     key={`d-${w.seq}-${idx}-${fi}`}
-                    className="pointer-events-none absolute z-10 flex h-8 min-w-[3.25rem] items-center justify-center rounded-full border border-blue-200 bg-blue-50 px-2 font-mono text-[11px] font-bold text-blue-900 shadow transition-all duration-700 ease-out animate-packet-pulse"
+                    className="pointer-events-none absolute z-10 flex h-8 min-w-[3.25rem] items-center justify-center rounded-full border border-blue-200 bg-blue-50 px-2 font-mono text-[11px] font-bold text-blue-950 shadow transition-all duration-700 ease-out animate-packet-pulse dark:border-blue-600 dark:bg-blue-950 dark:text-blue-100"
                     style={{
                       left: `calc(${leftPct}% - ${leftPct * 0.04}rem)`,
                       top,
@@ -326,7 +335,7 @@ export function SlidingWindowLab() {
               return (
                 <div
                   key={`a-${w.upto}-${idx}-${fi}`}
-                  className="pointer-events-none absolute z-10 flex h-8 min-w-[3.75rem] items-center justify-center rounded-full border border-violet-200 bg-violet-50 px-2 font-mono text-[11px] font-bold text-violet-900 shadow transition-all duration-700 ease-out"
+                  className="pointer-events-none absolute z-10 flex h-8 min-w-[3.75rem] items-center justify-center rounded-full border border-violet-200 bg-violet-50 px-2 font-mono text-[11px] font-bold text-violet-950 shadow transition-all duration-700 ease-out dark:border-violet-600 dark:bg-violet-950 dark:text-violet-100"
                   style={{
                     left: `calc(${leftPct}% - ${leftPct * 0.04}rem)`,
                     top: 88,
