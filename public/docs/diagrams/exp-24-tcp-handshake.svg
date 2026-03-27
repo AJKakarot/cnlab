@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-hidden="true">
+  <rect width="720" height="260" fill="#f8fafc" rx="8"/>
+  <text x="360" y="32" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a">TCP three-way handshake</text>
+  <text x="120" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">Client</text>
+  <text x="600" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#047857">Server</text>
+  <line x1="120" y1="110" x2="600" y2="110" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="120" y1="160" x2="600" y2="160" stroke="#cbd5e1" stroke-width="2"/>
+  <path d="M 120 110 L 600 160" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#mh)"/>
+  <text x="420" y="128" font-size="10" fill="#1d4ed8">SYN</text>
+  <path d="M 600 160 L 120 210" stroke="#0d9488" stroke-width="2.5" fill="none" marker-end="url(#mh2)"/>
+  <text x="420" y="198" font-size="10" fill="#0f766e">SYN-ACK</text>
+  <path d="M 120 210 L 600 220" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#mh)"/>
+  <text x="420" y="238" font-size="10" fill="#1d4ed8">ACK</text>
+  <defs>
+    <marker id="mh" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/></marker>
+    <marker id="mh2" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M8,0 L0,4 L8,8 z" fill="#0d9488"/></marker>
+  </defs>
+</svg>

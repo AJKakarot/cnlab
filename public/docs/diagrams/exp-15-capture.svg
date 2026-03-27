@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img" aria-hidden="true">
+  <rect width="720" height="280" fill="#f8fafc" rx="8"/>
+  <text x="360" y="30" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a">Packet capture pipeline</text>
+  <rect x="64" y="70" width="100" height="56" rx="8" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+  <text x="114" y="100" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">NIC</text>
+  <line x1="164" y1="98" x2="260" y2="98" stroke="#475569" stroke-width="2"/>
+  <polygon points="260,98 248,92 248,104" fill="#475569"/>
+  <rect x="268" y="70" width="140" height="56" rx="8" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+  <text x="338" y="100" text-anchor="middle" font-size="11" fill="#e2e8f0">tcpdump</text>
+  <text x="338" y="116" text-anchor="middle" font-size="9" fill="#94a3b8">BPF filter</text>
+  <line x1="408" y1="98" x2="500" y2="98" stroke="#475569" stroke-width="2"/>
+  <polygon points="500,98 488,92 488,104" fill="#475569"/>
+  <rect x="508" y="70" width="148" height="56" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="582" y="100" text-anchor="middle" font-size="11" font-weight="600" fill="#1e40af">file.pcap</text>
+  <rect x="260" y="160" width="200" height="56" rx="8" fill="#fff" stroke="#14b8a6" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="360" y="192" text-anchor="middle" font-size="11" font-weight="600" fill="#0f766e">Wireshark GUI</text>
+  <text x="360" y="248" text-anchor="middle" font-size="10" fill="#64748b">Display filters: dns || http || arp</text>
+</svg>

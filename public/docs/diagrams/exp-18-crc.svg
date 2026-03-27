@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img" aria-hidden="true">
+  <rect width="720" height="280" fill="#f8fafc" rx="8"/>
+  <text x="360" y="30" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a">CRC  linear feedback (concept)</text>
+  <rect x="80" y="70" width="200" height="48" rx="6" fill="#fff" stroke="#64748b" stroke-width="2"/>
+  <text x="180" y="100" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12" fill="#334155">Data bits D</text>
+  <text x="300" y="98" font-size="18" fill="#64748b">+</text>
+  <rect x="320" y="70" width="120" height="48" rx="6" fill="#fce7f3" stroke="#be185d" stroke-width="2"/>
+  <text x="380" y="100" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#831843">r CRC bits</text>
+  <polygon points="470,94 520,70 520,118" fill="#475569"/>
+  <rect x="530" y="70" width="140" height="48" rx="6" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+  <text x="600" y="100" text-anchor="middle" font-size="10" fill="#064e3b">divide by G(x)</text>
+  <text x="360" y="160" text-anchor="middle" font-size="11" fill="#475569">Transmitter: append CRC so remainder is 0 (mod G).</text>
+  <text x="360" y="182" text-anchor="middle" font-size="11" fill="#475569">Receiver: nonzero remainder implies one or more bit errors (within detectable burst).</text>
+</svg>

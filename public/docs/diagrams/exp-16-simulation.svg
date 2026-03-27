@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img" aria-hidden="true">
+  <rect width="720" height="280" fill="#f8fafc" rx="8"/>
+  <text x="360" y="30" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a">Network simulation (conceptual)</text>
+  <g fill="#e0e7ff" stroke="#4338ca" stroke-width="2">
+    <rect x="80" y="70" width="70" height="44" rx="6"/><rect x="200" y="70" width="70" height="44" rx="6"/>
+    <rect x="320" y="70" width="70" height="44" rx="6"/><rect x="440" y="70" width="70" height="44" rx="6"/>
+  </g>
+  <g font-family="ui-sans-serif,system-ui,sans-serif" font-size="10" fill="#312e81" font-weight="600">
+    <text x="115" y="97" text-anchor="middle">N1</text><text x="235" y="97" text-anchor="middle">N2</text>
+    <text x="355" y="97" text-anchor="middle">N3</text><text x="475" y="97" text-anchor="middle">N4</text>
+  </g>
+  <line x1="150" y1="92" x2="194" y2="92" stroke="#6366f1" stroke-width="3"/>
+  <line x1="270" y1="92" x2="314" y2="92" stroke="#6366f1" stroke-width="3"/>
+  <line x1="390" y1="92" x2="434" y2="92" stroke="#6366f1" stroke-width="3"/>
+  <rect x="220" y="150" width="280" height="72" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="360" y="182" text-anchor="middle" font-size="11" font-weight="600" fill="#9a3412">Discrete-event kernel</text>
+  <text x="360" y="202" text-anchor="middle" font-size="10" fill="#c2410c">queues, links, traces, animate (tool-specific)</text>
+  <text x="360" y="256" text-anchor="middle" font-size="10" fill="#64748b">Packet Tracer, NS-2, NS-3, OMNeT++ per your department.</text>
+</svg>

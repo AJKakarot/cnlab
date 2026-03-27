@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img" aria-hidden="true">
+  <rect width="720" height="280" fill="#f8fafc" rx="8"/>
+  <text x="360" y="32" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a">Mask as bit filter</text>
+  <text x="360" y="58" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#334155">IP address   : 1100 1010 . 0000 0001 . 0000 0001 . 0011 0010</text>
+  <text x="360" y="86" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#b45309">Subnet mask  : 1111 1111 . 1111 1111 . 1111 1111 . 1100 0000  (/26)</text>
+  <text x="360" y="114" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#15803d">Network (AND): bold bits = network id; rest = host part</text>
+  <rect x="120" y="140" width="480" height="56" rx="8" fill="#fff" stroke="#cbd5e1"/>
+  <text x="360" y="174" text-anchor="middle" font-size="11" fill="#475569">Practice: compute by hand, then check with subnetting_lab.py</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-hidden="true">
+  <rect width="720" height="300" fill="#241b1a"/>
+  <text x="360" y="36" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" fill="#fde68a">AIMD-style cwnd (toy model)</text>
+  <polyline points="80,240 120,220 160,200 200,185 240,175 280,170 320,168 360,120 400,95 440,110 480,130 520,142 560,152 600,160 640,165" fill="none" stroke="#34d399" stroke-width="3"/>
+  <line x1="80" y1="260" x2="640" y2="260" stroke="#57534e" stroke-width="1"/>
+  <line x1="80" y1="80" x2="80" y2="260" stroke="#57534e" stroke-width="1"/>
+  <text x="90" y="276" font-family="ui-sans-serif,system-ui,sans-serif" font-size="10" fill="#a8a29e">time / RTT steps</text>
+  <text x="24" y="170" font-family="ui-sans-serif,system-ui,sans-serif" font-size="10" fill="#a8a29e" transform="rotate(-90 24 170)">cwnd</text>
+  <text x="360" y="112" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" fill="#fbbf24">loss event</text>
+  <text x="400" y="220" font-family="ui-sans-serif,system-ui,sans-serif" font-size="10" fill="#d6d3d1">AI: gradual climb</text>
+  <text x="360" y="238" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="10" fill="#a8a29e">Not NS-3; table in script is for classroom discussion only.</text>
+</svg>

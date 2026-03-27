@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-hidden="true">
+  <rect width="720" height="260" fill="#1c1917"/>
+  <text x="360" y="36" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" fill="#fde68a">CSMA/CD shared bus</text>
+  <line x1="80" y1="130" x2="640" y2="130" stroke="#78716c" stroke-width="8" stroke-linecap="round"/>
+  <rect x="120" y="90" width="56" height="40" rx="4" fill="#fbbf24" stroke="#d97706"/>
+  <text x="148" y="116" text-anchor="middle" font-size="10" fill="#713f12" font-weight="700">A</text>
+  <rect x="520" y="90" width="56" height="40" rx="4" fill="#fbbf24" stroke="#d97706"/>
+  <text x="548" y="116" text-anchor="middle" font-size="10" fill="#713f12" font-weight="700">B</text>
+  <text x="320" y="115" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" fill="#f87171">collision region</text>
+  <text x="360" y="190" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" fill="#d6d3d1">sense, transmit, jam on collision, random backoff</text>
+  <text x="360" y="218" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="10" fill="#a8a29e">Replaced in modern LANs by full-duplex switched links.</text>
+</svg>

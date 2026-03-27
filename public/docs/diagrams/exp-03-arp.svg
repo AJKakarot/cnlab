@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" role="img" aria-label="ARP WHO-HAS and IS-AT exchange">
+  <rect width="720" height="200" fill="#f8fafc" rx="10"/>
+  <text x="360" y="36" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="600" fill="#0f172a">ARP on one broadcast domain (concept)</text>
+  <text x="120" y="110" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#334155">Host A</text>
+  <text x="600" y="110" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#334155">Gateway</text>
+  <line x1="170" y1="108" x2="550" y2="108" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="170" y1="128" x2="530" y2="128" stroke="#ea580c" stroke-width="2"/>
+  <polygon points="530,128 516,122 516,134" fill="#ea580c"/>
+  <text x="360" y="120" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#9a3412">broadcast WHO-HAS</text>
+  <line x1="550" y1="152" x2="190" y2="152" stroke="#0284c7" stroke-width="2"/>
+  <polygon points="190,152 204,146 204,158" fill="#0284c7"/>
+  <text x="360" y="168" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#0369a1">unicast IS-AT (MAC)</text>
+</svg>

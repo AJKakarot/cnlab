@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-hidden="true">
+  <rect width="720" height="300" fill="#f8fafc" rx="8"/>
+  <text x="360" y="32" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a">HTTP/1.1 over TCP</text>
+  <rect x="48" y="64" width="160" height="72" rx="8" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="128" y="92" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12" font-weight="600" fill="#9a3412">Client</text>
+  <text x="128" y="112" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="10" fill="#c2410c">urllib / http.client</text>
+  <rect x="512" y="64" width="160" height="72" rx="8" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="592" y="92" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12" font-weight="600" fill="#312e81">Origin server</text>
+  <text x="592" y="112" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="10" fill="#4338ca">:443 or :80</text>
+  <line x1="210" y1="88" x2="500" y2="88" stroke="#c2410c" stroke-width="2"/>
+  <polygon points="500,88 488,82 488,94" fill="#c2410c"/>
+  <text x="355" y="82" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#9a3412">GET /path HTTP/1.1</text>
+  <line x1="500" y1="118" x2="210" y2="118" stroke="#4338ca" stroke-width="2"/>
+  <polygon points="210,118 222,112 222,124" fill="#4338ca"/>
+  <text x="355" y="132" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#3730a3">200 OK + body</text>
+  <rect x="120" y="168" width="480" height="100" rx="8" fill="#fff" stroke="#cbd5e1"/>
+  <text x="360" y="194" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" font-weight="600" fill="#334155">Message parts</text>
+  <text x="360" y="218" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#64748b">request-line · Host · headers · [body for POST]</text>
+  <text x="360" y="240" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#64748b">status-line · headers · body</text>
+</svg>

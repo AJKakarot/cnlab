@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-hidden="true">
+  <rect width="720" height="300" fill="#f8fafc" rx="8"/>
+  <text x="360" y="30" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a">UDP checksum coverage (IPv4)</text>
+  <rect x="100" y="60" width="520" height="44" rx="6" fill="#fef9c3" stroke="#ca8a04"/>
+  <text x="360" y="88" text-anchor="middle" font-size="11" font-weight="600" fill="#713f12">Pseudo-header: src IP, dst IP, zero, proto=17, UDP length</text>
+  <rect x="100" y="118" width="520" height="44" rx="6" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="360" y="146" text-anchor="middle" font-size="11" font-weight="600" fill="#0c4a6e">UDP header (incl. checksum field)</text>
+  <rect x="100" y="176" width="520" height="44" rx="6" fill="#f1f5f9" stroke="#64748b"/>
+  <text x="360" y="204" text-anchor="middle" font-size="11" fill="#475569">Payload</text>
+  <text x="360" y="260" text-anchor="middle" font-size="10" fill="#64748b">16-bit words, ones&apos;-complement sum; optional (0 = disabled) on some stacks.</text>
+</svg>

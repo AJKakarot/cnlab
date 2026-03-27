@@ -1,8 +1,31 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+  --success: #059669;
+  --channel: #f3f4f6;
+  --card: #ffffff;
+  --card-border: #e5e7eb;
+}
+
+.dark {
+  --background: #0a0a0b;
+  --foreground: #f4f4f5;
+  --muted: #a1a1aa;
+  --border: #27272a;
+  --accent: #60a5fa;
+  --accent-soft: #1e3a5f;
+  --success: #34d399;
+  --channel: #18181b;
+  --card: #121214;
+  --card-border: #27272a;
 }
 
 @theme inline {
@@ -12,15 +35,38 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@keyframes packet-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(37 99 235 / 0.35);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgb(37 99 235 / 0.2);
+  }
+}
+
+.animate-packet-pulse {
+  animation: packet-glow 2s ease-in-out infinite;
+}
+
+@keyframes fade-slide {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-log-line {
+  animation: fade-slide 0.35s ease-out forwards;
 }
