@@ -10,10 +10,10 @@ export function SiteNavbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur-sm dark:border-neutral-800 dark:bg-neutral-950/95">
-      <div className="mx-auto flex h-11 max-w-4xl items-center justify-between gap-4 px-4 md:px-8">
+      <div className="mx-auto flex h-11 max-w-4xl min-w-0 items-center justify-between gap-2 px-3 sm:gap-4 sm:px-4 md:px-8">
         <Link
           href="/"
-          className="text-sm font-semibold tracking-tight text-neutral-900 transition hover:text-neutral-600 dark:text-neutral-100 dark:hover:text-neutral-300"
+          className="min-w-0 truncate text-sm font-semibold tracking-tight text-neutral-900 transition hover:text-neutral-600 dark:text-neutral-100 dark:hover:text-neutral-300"
         >
           Computer Program Lab
         </Link>

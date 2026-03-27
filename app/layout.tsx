@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col bg-[var(--background)] text-[var(--foreground)]">
         <AppProviders>
           <SiteNavbar />
-          <div className="flex flex-1 flex-col">{children}</div>
+          <div className="flex min-h-0 min-w-0 flex-1 flex-col">{children}</div>
           <SiteFooter />
         </AppProviders>
       </body>

@@ -74,8 +74,8 @@ export function CliServicesLab() {
   };
 
   return (
-    <div className="space-y-6 p-6 md:p-8">
-      <div className="flex flex-wrap gap-2">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
+      <div className="-mx-1 flex gap-1.5 overflow-x-auto overflow-y-hidden px-1 pb-1 [-webkit-overflow-scrolling:touch] [scrollbar-width:thin] sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
         {(
           [
             ["ping", "ping"] as const,
@@ -94,7 +94,7 @@ export function CliServicesLab() {
               setTab(k);
               setLog([]);
             }}
-            className={`rounded-full px-3 py-1.5 text-xs font-medium sm:text-sm ${
+            className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-medium sm:shrink sm:text-sm ${
               tab === k ? "bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900" : "border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-900"
             } disabled:opacity-50`}
           >

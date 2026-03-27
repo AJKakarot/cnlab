@@ -46,7 +46,7 @@ export function LanDevicesLab() {
   };
 
   return (
-    <div className="space-y-6 p-6 md:p-8">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
       <div className="flex flex-wrap gap-2">
         {(
           [
@@ -73,8 +73,9 @@ export function LanDevicesLab() {
         ))}
       </div>
 
-      <div className="relative rounded-2xl border border-sky-200/80 bg-sky-50/40 p-4 dark:border-sky-900/50 dark:bg-sky-950/20 md:p-6">
-        <svg viewBox="0 0 640 260" className="w-full max-w-3xl" role="img" aria-label="LAN topology">
+      <div className="relative min-w-0 rounded-2xl border border-sky-200/80 bg-sky-50/40 p-3 dark:border-sky-900/50 dark:bg-sky-950/20 sm:p-4 md:p-6">
+        <div className="min-w-0 overflow-x-auto [-webkit-overflow-scrolling:touch]">
+        <svg viewBox="0 0 640 260" className="h-auto w-full min-w-[520px] max-w-none sm:min-w-0 sm:max-w-3xl" role="img" aria-label="LAN topology">
           <rect width="640" height="260" rx="14" fill="#f8fafc" className="dark:fill-neutral-950" />
           {/* links */}
           <line x1="132" y1="126" x2="250" y2="128" stroke="#94a3b8" strokeWidth="3" />
@@ -149,6 +150,7 @@ export function LanDevicesLab() {
             </circle>
           )}
         </svg>
+        </div>
 
         <button
           type="button"

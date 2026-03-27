@@ -28,7 +28,7 @@ export function DocsView({ experiment, bundled }: Props) {
   const diagramAsset = getDiagramAsset(experiment.id);
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8 md:px-8 md:py-12">
+    <div className="mx-auto min-w-0 max-w-4xl px-3 py-6 sm:px-4 md:px-8 md:py-12">
       <nav className="mb-8 text-xs text-neutral-500 dark:text-neutral-400">
         <Link
           href={`/?e=${experiment.id}`}
@@ -42,7 +42,7 @@ export function DocsView({ experiment, bundled }: Props) {
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
           Lab documentation · Experiment {experiment.id} of {EXPERIMENTS.length}
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+        <h1 className="mt-2 text-balance text-2xl font-semibold tracking-tight text-neutral-900 sm:text-3xl dark:text-neutral-100">
           {experiment.title}
         </h1>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
@@ -53,7 +53,7 @@ export function DocsView({ experiment, bundled }: Props) {
       </header>
 
       <article className="mt-10 space-y-12 text-sm leading-relaxed text-neutral-800 dark:text-neutral-200">
-        <section className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-700 dark:bg-[var(--card)]">
+        <section className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm sm:p-6 dark:border-neutral-700 dark:bg-[var(--card)]">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">1. Aim</h2>
           <ul className="mt-4 list-inside list-disc space-y-2.5 text-neutral-700 dark:text-neutral-300">
             {experiment.aim.map((a, i) => (
@@ -64,12 +64,12 @@ export function DocsView({ experiment, bundled }: Props) {
           </ul>
         </section>
 
-        <section className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-700 dark:bg-[var(--card)]">
+        <section className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm sm:p-6 dark:border-neutral-700 dark:bg-[var(--card)]">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">2. Theory</h2>
           <p className="mt-4 whitespace-pre-wrap text-neutral-700 dark:text-neutral-300">{experiment.theory}</p>
         </section>
 
-        <section className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-700 dark:bg-[var(--card)]">
+        <section className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm sm:p-6 dark:border-neutral-700 dark:bg-[var(--card)]">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">3. Diagram</h2>
           <p className="mt-3 text-neutral-600 dark:text-neutral-400">
             Figure (SVG): quick visual. Below it, the same idea is repeated as monospace text for copy-paste into notes.
@@ -95,7 +95,7 @@ export function DocsView({ experiment, bundled }: Props) {
           </pre>
         </section>
 
-        <section className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-700 dark:bg-[var(--card)]">
+        <section className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm sm:p-6 dark:border-neutral-700 dark:bg-[var(--card)]">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">4. Procedure (lab steps)</h2>
           <ol className="mt-4 list-inside list-decimal space-y-2.5 text-neutral-700 dark:text-neutral-300">
             {experiment.procedure.map((p, i) => (
@@ -106,7 +106,7 @@ export function DocsView({ experiment, bundled }: Props) {
           </ol>
         </section>
 
-        <section className="rounded-2xl border border-emerald-200/80 bg-gradient-to-b from-emerald-50/50 to-white p-6 shadow-sm dark:border-emerald-900/50 dark:from-emerald-950/20 dark:to-[var(--card)]">
+        <section className="rounded-2xl border border-emerald-200/80 bg-gradient-to-b from-emerald-50/50 to-white p-4 shadow-sm sm:p-6 dark:border-emerald-900/50 dark:from-emerald-950/20 dark:to-[var(--card)]">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">5. Commands &amp; sample I/O</h2>
           <p className="mt-3 text-neutral-600 dark:text-neutral-400">
             Run these from the project root unless noted. Output below is representative: your byte counts, RTTs, or timestamps may differ slightly (especially with network experiments).
@@ -121,10 +121,10 @@ export function DocsView({ experiment, bundled }: Props) {
               {sampleBlocks.map((block, i) => (
                 <div
                   key={`${experiment.title}-${block.title}-${String(i)}`}
-                  className="rounded-xl border border-neutral-200/90 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-950/80"
+                  className="min-w-0 rounded-xl border border-neutral-200/90 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-950/80 sm:p-5"
                 >
                   <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">{block.title}</h3>
-                  <div className="mt-5 grid gap-5 lg:grid-cols-2">
+                  <div className="mt-5 grid min-w-0 gap-5 lg:grid-cols-2">
                     <div>
                       <p className="text-[11px] font-bold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Input</p>
                       <pre className="mt-2 max-h-[min(24rem,55vh)] overflow-auto whitespace-pre-wrap rounded-lg border border-slate-200 bg-slate-950 p-4 font-mono text-[11px] leading-relaxed text-slate-100 dark:border-slate-700 md:text-xs">
@@ -144,7 +144,7 @@ export function DocsView({ experiment, bundled }: Props) {
           )}
         </section>
 
-        <section className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-700 dark:bg-[var(--card)]">
+        <section className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm sm:p-6 dark:border-neutral-700 dark:bg-[var(--card)]">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">6. Code (reference)</h2>
           <p className="mt-3 text-neutral-600 dark:text-neutral-400">{experimentCodeLabel(experiment.id)}</p>
           <pre className="mt-4 max-h-[min(32rem,60vh)] overflow-auto whitespace-pre-wrap rounded-xl bg-neutral-900 p-4 font-mono text-xs leading-relaxed text-neutral-100">
@@ -152,7 +152,7 @@ export function DocsView({ experiment, bundled }: Props) {
           </pre>
         </section>
 
-        <section className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-700 dark:bg-neutral-900/50">
+        <section className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900/50 sm:p-6">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">7. Expected result</h2>
           <p className="mt-4 text-neutral-700 dark:text-neutral-300">{experiment.result}</p>
         </section>

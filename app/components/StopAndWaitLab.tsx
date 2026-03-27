@@ -73,8 +73,8 @@ export function StopAndWaitLab() {
   const showAck = phase === "ack_go" || phase === "ack_there";
 
   return (
-    <div className="space-y-6 p-6 md:p-8">
-      <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 md:p-8">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
+      <div className="min-w-0 overflow-x-auto rounded-2xl border border-neutral-200 bg-neutral-50 p-4 [-webkit-overflow-scrolling:touch] sm:p-6 md:p-8">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <span className="text-xs font-medium uppercase tracking-wide text-neutral-500">
@@ -87,13 +87,23 @@ export function StopAndWaitLab() {
           <button
             type="button"
             onClick={() => setRunning((r) => !r)}
-            className="rounded-full border border-neutral-300 bg-white px-4 py-1.5 text-sm font-medium shadow-sm transition hover:bg-neutral-50 active:scale-[0.98]"
+            className={`rounded-full px-4 py-1.5 text-sm font-semibold shadow-sm transition active:scale-[0.98] ${
+              running
+                ? "border border-neutral-300 bg-white text-neutral-800 hover:bg-neutral-50"
+                : "border border-neutral-900 bg-neutral-900 text-white hover:bg-neutral-800"
+            }`}
           >
             {running ? "Pause" : "Play"}
           </button>
         </div>
 
-        <div className="flex items-start gap-2 md:gap-4">
+        {!running && log.length === 0 ? (
+          <p className="mb-2 text-xs text-neutral-500">
+            Click Play to run the stop-and-wait DATA and ACK animation; the event log fills as each step runs.
+          </p>
+        ) : null}
+
+        <div className="flex min-w-[260px] items-start gap-2 md:gap-4">
           <div
             className={`flex w-24 shrink-0 flex-col items-center justify-center rounded-xl border-2 bg-white px-2 py-4 md:w-28 md:py-6 ${
               phase === "ack_there" ? "border-emerald-300 shadow-md ring-2 ring-emerald-100" : "border-neutral-200"

@@ -228,8 +228,8 @@ export function SlidingWindowLab() {
   const numbers = Array.from({ length: TOTAL_FRAMES }, (_, i) => i);
 
   return (
-    <div className="space-y-6 p-6 md:p-8">
-      <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 md:p-8">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
+      <div className="min-w-0 overflow-x-auto rounded-2xl border border-neutral-200 bg-neutral-50 p-4 sm:p-6 md:p-8 [-webkit-overflow-scrolling:touch]">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
           <div className="flex flex-wrap gap-4 text-xs text-neutral-600">
             <span>
@@ -253,7 +253,11 @@ export function SlidingWindowLab() {
             <button
               type="button"
               onClick={() => setRunning((r) => !r)}
-              className="rounded-full border border-neutral-300 bg-white px-3 py-1.5 text-sm font-medium shadow-sm transition hover:bg-neutral-50"
+              className={`rounded-full px-3 py-1.5 text-sm font-semibold shadow-sm transition active:scale-[0.98] ${
+                running
+                  ? "border border-neutral-300 bg-white text-neutral-800 hover:bg-neutral-50"
+                  : "border border-neutral-900 bg-neutral-900 text-white hover:bg-neutral-800"
+              }`}
             >
               {running ? "Pause" : "Play"}
             </button>
@@ -285,7 +289,7 @@ export function SlidingWindowLab() {
           <p className="mt-2 text-[11px] text-neutral-500">Legend: window · sent</p>
         </div>
 
-        <div className="flex items-start gap-2 md:gap-4">
+        <div className="flex min-w-[260px] items-start gap-2 md:gap-4">
           <div
             className={`flex w-20 shrink-0 flex-col items-center justify-center rounded-xl border-2 bg-white px-1 py-4 md:w-24 ${
               frame.txHighlight === "slide"

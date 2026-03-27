@@ -27,17 +27,17 @@ export function Rj45CrimpLab() {
   const [stepIdx, setStepIdx] = useState(0);
 
   return (
-    <div className="space-y-6 p-6 md:p-8">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
       <p className="text-sm text-neutral-600 dark:text-neutral-400">
         Straight-through: <strong className="text-neutral-800 dark:text-neutral-200">same</strong> order on both ends
         (T568B ↔ T568B). Visual only — real lab uses crimp tool + tester.
       </p>
 
-      <div className="rounded-2xl border border-amber-200/80 bg-amber-50/50 p-4 dark:border-amber-900/50 dark:bg-amber-950/25 md:p-6">
+      <div className="rounded-2xl border border-amber-200/80 bg-amber-50/50 p-3 dark:border-amber-900/50 dark:bg-amber-950/25 sm:p-4 md:p-6">
         <p className="mb-3 text-center text-xs font-semibold uppercase tracking-wide text-amber-900/80 dark:text-amber-200/90">
           RJ‑45 plug — wire end (T568B)
         </p>
-        <div className="flex flex-wrap justify-center gap-1 sm:gap-1.5">
+        <div className="mx-auto grid max-w-md grid-cols-4 gap-1 sm:flex sm:max-w-none sm:flex-wrap sm:justify-center sm:gap-1.5">
           {T568B.map((p) => {
             const on = hiPair === null || hiPair === p.pair;
             return (
@@ -45,7 +45,7 @@ export function Rj45CrimpLab() {
                 key={p.pin}
                 type="button"
                 onClick={() => setHiPair((v) => (v === p.pair ? null : p.pair))}
-                className={`flex w-[4.5rem] flex-col items-center rounded-lg border-2 px-1 py-2 text-[9px] font-medium transition sm:w-[4.75rem] ${
+                className={`flex min-h-[4.25rem] flex-col items-center rounded-lg border-2 px-0.5 py-1.5 text-[8px] font-medium transition sm:min-h-0 sm:w-[4.75rem] sm:px-1 sm:py-2 sm:text-[9px] ${
                   on ? "border-amber-600 opacity-100 dark:border-amber-400" : "border-neutral-200 opacity-45 dark:border-neutral-600"
                 }`}
                 style={{

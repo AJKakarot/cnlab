@@ -52,7 +52,7 @@ export function RoutingAlgorithmsLab() {
   }, []);
 
   return (
-    <div className="space-y-6 p-6 md:p-8">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
       <div className="flex flex-wrap gap-2">
         {(
           [
@@ -74,8 +74,9 @@ export function RoutingAlgorithmsLab() {
         ))}
       </div>
 
-      <div className="rounded-2xl border border-neutral-200 bg-indigo-50/30 p-4 dark:border-neutral-700 dark:bg-indigo-950/20">
-        <svg viewBox="0 0 720 280" className="w-full max-w-3xl" role="img" aria-label="topology A B C D">
+      <div className="min-w-0 rounded-2xl border border-neutral-200 bg-indigo-50/30 p-3 dark:border-neutral-700 dark:bg-indigo-950/20 sm:p-4">
+        <div className="min-w-0 overflow-x-auto [-webkit-overflow-scrolling:touch]">
+        <svg viewBox="0 0 720 280" className="h-auto w-full min-w-[560px] max-w-none sm:min-w-0 sm:max-w-3xl" role="img" aria-label="topology A B C D">
           <rect width="720" height="280" rx="12" fill="#fafafa" className="dark:fill-neutral-950" />
           {EDGES.map(([a, b, w]) => {
             const pa = NODE_POS[a];
@@ -109,6 +110,7 @@ export function RoutingAlgorithmsLab() {
             );
           })}
         </svg>
+        </div>
 
         {tab === "flood" && (
           <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -140,7 +142,7 @@ export function RoutingAlgorithmsLab() {
         )}
 
         {tab === "dv" && (
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {Object.keys(ROUTING_GRAPH)
       .sort()
       .map((u) => (
@@ -163,7 +165,7 @@ export function RoutingAlgorithmsLab() {
           <div className="mt-4 space-y-3">
             <p className="text-sm text-neutral-700 dark:text-neutral-300">
               Dijkstra from <strong>A</strong> on the diagram: visit order{" "}
-              <span className="font-mono">{visitOrder.join(" → ")}</span>
+              <span className="break-all font-mono text-xs sm:text-sm">{visitOrder.join(" → ")}</span>
             </p>
             <div className="rounded-lg border border-neutral-200 bg-white p-3 font-mono text-xs dark:border-neutral-700 dark:bg-neutral-950">
               {Object.keys(finalDist)
@@ -179,7 +181,7 @@ export function RoutingAlgorithmsLab() {
         )}
       </div>
 
-      <p className="text-xs text-neutral-500">
+      <p className="break-words text-xs text-neutral-500">
         CLI: python3 experiments/routing_algorithms_lab.py demo | dijkstra
       </p>
     </div>

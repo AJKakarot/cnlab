@@ -123,7 +123,7 @@ export function UdpProtocolsLab() {
   const label = tab === "dns" ? "UDP" : tab === "snmp" ? "SNMP" : "DG";
 
   return (
-    <div className="space-y-6 p-6 md:p-8">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
       <div className="flex flex-wrap gap-2">
         {(
           [
@@ -146,8 +146,8 @@ export function UdpProtocolsLab() {
         ))}
       </div>
 
-      <div className="rounded-2xl border border-neutral-200 bg-amber-50/40 p-5 dark:border-neutral-700 dark:bg-amber-950/20 md:p-6">
-        <div className="relative mb-6 min-h-[6rem]">
+      <div className="min-w-0 overflow-x-auto rounded-2xl border border-neutral-200 bg-amber-50/40 p-4 dark:border-neutral-700 dark:bg-amber-950/20 [-webkit-overflow-scrolling:touch] sm:p-5 md:p-6">
+        <div className="relative mb-6 min-h-[6rem] min-w-[260px]">
           <div className="absolute left-[10%] right-[10%] top-[2rem] border-t-2 border-dashed border-amber-400/80 dark:border-amber-700" />
           {tab === "file" && (
             <div className="absolute bottom-0 left-[10%] right-[10%] flex justify-center gap-1">

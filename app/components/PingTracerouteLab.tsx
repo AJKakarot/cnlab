@@ -217,7 +217,7 @@ export function PingTracerouteLab() {
   const showTraceBubble = tab === "trace" && traceHop >= 0 && traceLeg !== "idle";
 
   return (
-    <div className="space-y-6 p-6 md:p-8">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
       <div className="flex flex-wrap gap-2">
         {(
           [
@@ -241,8 +241,8 @@ export function PingTracerouteLab() {
         ))}
       </div>
 
-      <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5 dark:border-neutral-700 dark:bg-neutral-900/40 md:p-6">
-        <div className="relative mb-14 min-h-[3.5rem]">
+      <div className="min-w-0 overflow-x-auto rounded-2xl border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900/40 [-webkit-overflow-scrolling:touch] sm:p-5 md:p-6">
+        <div className="relative mb-14 min-h-[3.5rem] min-w-[280px]">
           <div className="absolute left-[6%] right-[6%] top-7 h-1 rounded-full bg-gradient-to-r from-cyan-200/80 via-neutral-200 to-teal-200/80 dark:from-cyan-900/50 dark:via-neutral-700 dark:to-teal-900/50" />
           <div className="relative flex justify-between gap-1">
             {NODES.map((label, i) => {

@@ -13,7 +13,7 @@ export function SubnettingInteractiveLab() {
     result.totalAddrs > 0 && result.assignableHosts > 0 ? result.assignableHosts / result.totalAddrs : 0;
 
   return (
-    <div className="space-y-6 p-6 md:p-8">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
       <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-end">
         <div className="min-w-0 flex-1">
           <label htmlFor="cidr-in" className="text-xs font-medium uppercase tracking-wide text-neutral-500">
@@ -75,8 +75,8 @@ export function SubnettingInteractiveLab() {
           )}
 
           <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900/50">
-            <div className="mb-2 flex justify-between text-xs text-neutral-600 dark:text-neutral-400">
-              <span>Assignable hosts (excl. net/broadcast, classful view)</span>
+            <div className="mb-2 flex flex-col gap-1 text-xs text-neutral-600 sm:flex-row sm:justify-between sm:gap-0 dark:text-neutral-400">
+              <span className="min-w-0">Assignable hosts (excl. net/broadcast, classful view)</span>
               <span className="font-mono font-semibold text-neutral-900 dark:text-neutral-100">{result.assignableHosts}</span>
             </div>
             <div className="h-3 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">

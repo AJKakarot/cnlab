@@ -1,14 +1,17 @@
 export function SiteFooter() {
   return (
-    <footer className="border-t border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
-      <div className="mx-auto flex min-h-14 max-w-4xl items-center justify-center px-4 py-3.5 md:px-8">
-        <p className="text-sm leading-snug text-neutral-500 dark:text-neutral-400">
+    <footer className="mt-auto border-t border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900">
+      <div className="mx-auto flex max-w-4xl min-w-0 flex-col items-center justify-center gap-2 px-4 py-5 text-center sm:px-6 md:px-8 md:py-6">
+        <p className="text-sm font-medium text-neutral-700 dark:text-neutral-200">
+          Computer Networks Lab — syllabus experiments and docs
+        </p>
+        <p className="max-w-md text-sm leading-snug text-neutral-600 dark:text-neutral-400">
           Made by{" "}
           <a
             href="https://ajeetgupta.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-neutral-800 underline decoration-neutral-300 underline-offset-2 transition hover:text-neutral-600 hover:decoration-neutral-400 dark:text-neutral-200 dark:decoration-neutral-500 dark:hover:text-neutral-100"
+            className="font-medium text-neutral-900 underline decoration-neutral-400 underline-offset-2 transition hover:decoration-neutral-600 dark:text-white dark:decoration-neutral-500 dark:hover:text-neutral-100"
           >
             Ajeet
           </a>
@@ -17,7 +20,7 @@ export function SiteFooter() {
             href="https://ajeetgupta.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neutral-600 transition hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
+            className="text-neutral-800 transition hover:text-neutral-950 dark:text-neutral-300 dark:hover:text-white"
           >
             ajeetgupta.com
           </a>

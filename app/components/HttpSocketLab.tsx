@@ -120,7 +120,7 @@ export function HttpSocketLab() {
   const serverLabel = tab === "get" ? "example.com\n:443" : "127.0.0.1\n:8080";
 
   return (
-    <div className="space-y-6 p-6 md:p-8">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
       <div className="flex flex-wrap gap-2">
         {(
           [
@@ -144,8 +144,8 @@ export function HttpSocketLab() {
         ))}
       </div>
 
-      <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5 dark:border-neutral-700 dark:bg-neutral-900/40 md:p-6">
-        <div className="relative mb-4 min-h-[6.5rem]">
+      <div className="min-w-0 overflow-x-auto rounded-2xl border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900/40 [-webkit-overflow-scrolling:touch] sm:p-5 md:p-6">
+        <div className="relative mb-4 min-h-[6.5rem] min-w-[260px]">
           <div className="absolute left-[10%] right-[10%] top-[2.25rem] h-1.5 rounded-full bg-gradient-to-r from-orange-200/90 via-neutral-200 to-violet-200/90 dark:from-orange-950 dark:via-neutral-700 dark:to-violet-950" />
           <div className="relative flex justify-between gap-2">
             <div

@@ -125,8 +125,8 @@ export function TcpEchoLab() {
   const returnLeaveServer = phase === "echo_to_client" || phase === "done";
 
   return (
-    <div className="space-y-6 overflow-hidden p-6 md:p-8">
-      <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-700 dark:bg-neutral-900/40 md:p-8">
+    <div className="min-w-0 space-y-4 p-3 sm:space-y-6 sm:p-5 md:p-8">
+      <div className="min-w-0 overflow-x-auto rounded-2xl border border-neutral-200 bg-neutral-50 p-4 [-webkit-overflow-scrolling:touch] dark:border-neutral-700 dark:bg-neutral-900/40 sm:p-6 md:p-8">
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
           <div className="flex min-w-0 flex-1 flex-col gap-2">
             <label htmlFor="tcp-echo-msg" className="text-xs font-medium uppercase tracking-wide text-neutral-500">
@@ -166,7 +166,7 @@ export function TcpEchoLab() {
           </div>
         </div>
 
-        <div className="flex items-start gap-2 md:gap-4">
+        <div className="flex min-w-[260px] items-start gap-2 md:gap-4">
           <div
             className={`flex w-[5.5rem] shrink-0 flex-col items-center justify-center gap-1 rounded-xl border-2 px-2 py-4 transition-all duration-300 md:w-28 md:py-6 ${
               serverHot
